@@ -1,0 +1,21 @@
+//To count the total Number of element
+
+#include<iostream>
+using namespace std;
+int main(){
+    long long num;
+    cout<<"Enter the Number: ";
+    cin>>num;
+    int count = 0;
+    while(num > 0){
+        num = num/10;
+        count++;
+    }
+    cout<<"The total Number: "<<count;
+    return 0;
+}
+
+
+OUTPUT:
+Enter the Number: 1234567890365
+The total Number: 13
