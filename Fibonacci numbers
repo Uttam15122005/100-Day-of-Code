@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+int fibonacciNumbers(int num){
+    if(num == 0 || num == 1){
+        return num;
+    }
+    return fibonacciNumbers(num - 1) + fibonacciNumbers(num - 2);
+}
+int main(){
+    int num;
+    cin>>num;
+    cout<<fibonacciNumbers(num);
+    return 0;
+}
