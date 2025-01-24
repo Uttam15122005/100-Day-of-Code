@@ -1,0 +1,38 @@
+// to print the maximum or minimum array of a number
+#include<iostream>
+#include<climits>
+using namespace std;
+void maxAndMin(int arr[], int n){
+    int max = INT_MIN;
+    int min = INT_MAX;
+    for(int i=0; i<n; i++){
+        if(arr[i] > max){
+            max = arr[i];
+            
+        }
+        if(arr[i] < min){
+            min = arr[i];
+            
+        }
+    }
+    cout<<"Maximum number Of array: "<<max<<endl;
+    cout<<"minimum numberof array: "<<min;
+    
+}
+int main(){
+    int n;
+    cout<<"Enter the Size of Array: ";
+    cin>>n;
+    int arr[n];
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
+    }
+    cout<<"Array: ";
+    for(int i=0; i<n; i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+    maxAndMin(arr, n);
+    return 0;
+    
+}
