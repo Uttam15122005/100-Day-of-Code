@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+void unickNumber(int arr[], int n){
+    for(int i=0; i<n; i++){
+        int x = arr[i];
+        int count = 0;
+        for(int j=0; j<n; j++){
+            if(arr[j] == x){
+                count++;
+            }
+        }
+        if(count == 1){
+            cout<<arr[i]<<" ";
+        }
+    }
+}
+int main(){
+    int arr[] = {5,2,5,1,4,1,7,4,9};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    unickNumber(arr, n);
+    return 0;
+}
