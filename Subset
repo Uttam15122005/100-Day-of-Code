@@ -1,0 +1,21 @@
+// To print the subset of array 
+#include<iostream>
+#include<vector>
+using namespace std;
+void subset(vector<int>& nums){
+    int n = nums.size();
+    for(int start = 0; start<n; start++){
+        for(int end = start; end<n; end++){
+            for(int i=start; i<=end; i++){
+                cout<<nums[i]<<" ";
+            }
+            cout<<endl;
+        }
+    }
+}
+
+int main(){
+    vector<int> nums= {4,5,7,9};
+    subset(nums);
+    return 0;
+}
