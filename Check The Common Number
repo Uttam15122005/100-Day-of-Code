@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+void commonNumber(int arr[], int n){
+    for(int i=0; i<n; i++){
+        for(int j=i+1; j<n; j++){
+            if(arr[i] == arr[j]){
+                cout<<arr[i]<<" ";
+            }
+        }
+    }
+    cout<<endl;
+}
+int main(){
+    int arr[] = {3,5,2,5,8,0,6,8};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    commonNumber(arr, n);
+    return 0;
+}
