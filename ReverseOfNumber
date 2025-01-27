@@ -1,0 +1,24 @@
+//Reverse Of a number
+#include<iostream>
+#include<vector>
+using namespace std;
+void reverseOfNumber(vector<int>& nums){
+    int n = nums.size();
+    int start = 0, end = n - 1;
+    while(start< end){
+        int temp = nums[start];
+        nums[start] = nums[end];
+        nums[end] = temp;
+        start++;
+        end--;
+    }
+}
+int main(){
+    int n = 6;
+    vector<int> nums = {5,3,1,7,9,0};
+    reverseOfNumber(nums);
+    for(int i=0; i<n; i++){
+        cout<<nums[i]<<" ";
+    }
+    return 0;
+}
