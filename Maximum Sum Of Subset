@@ -1,0 +1,28 @@
+// maximum sum of subset Array 
+#include<iostream>
+#include<vector>
+#include<climits>
+using namespace std;
+void subsetOfArray(vector<int>& arr, int n){
+    int maxSum = INT_MIN;
+    for(int str=0; str<n; str++){
+        int currentSum = 0;
+        for(int end = str; end<n; end++){
+            currentSum += arr[end];
+            maxSum = max(currentSum, maxSum);
+        }
+    }
+    cout<<"The subset Of sum: "<<maxSum;
+}
+int main(){
+    int n;
+    cout<<"Enter the size of array: ";
+    cin>>n;
+    vector<int> arr(n);
+    cout<<"Enter the array: ";
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
+    }
+    subsetOfArray(arr, n);
+    return 0;
+}
