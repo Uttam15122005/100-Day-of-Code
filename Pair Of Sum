@@ -1,0 +1,27 @@
+//To print the pair of array 
+#include<iostream>
+#include<vector>
+using namespace std;
+void pairOfSum(vector<int>& nums,int n, int target){
+    for(int i=0; i<n; i++){
+        for(int j = i+1; j<n; j++){
+            if(nums[i] + nums[j] == target){
+                cout<<nums[i]<<" "<<nums[j];
+            }
+        }
+        cout<<endl;
+    }
+}
+int main(){
+    int n;
+    cout<<"Enter the size of array: ";
+    cin>>n;
+    vector<int> nums(n);
+    cout<<"Enter the array: ";
+    for(int i=0; i<n; i++){
+        cin>>nums[i];
+    }
+    pairOfSum(nums, n, 9);
+    
+    return 0;
+}
