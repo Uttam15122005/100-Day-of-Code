@@ -1,0 +1,17 @@
+//fibonic Of a number
+#include<iostream>
+using namespace std;
+int fibonic(int num){
+    if(num == 0 || num == 1){
+        return num;
+    }
+    return fibonic(num - 1) + fibonic(num - 2);
+}
+int main(){
+    int num;
+    cout<<"Enter the Number: ";
+    cin>>num;
+    int result = fibonic(num);
+    cout<<"The fibonic Number: "<<result;
+    return 0;
+}
