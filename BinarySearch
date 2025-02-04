@@ -1,0 +1,26 @@
+//Binary Search 
+#include<iostream>
+#include<vector>
+using namespace std;
+int binarySearch(vector<int>& nums, int target){
+    int n = nums.size();
+    int str = 0, end = n - 1;
+    int mid = str + (end - str)/2;
+    while(str < end){
+        if(nums[mid] == target){
+        return mid;
+    }else if(nums[mid] < target){
+        return mid + 1;
+    }else{
+        return mid - 1;
+    }
+    }
+    return -1;
+    
+    
+}
+int main(){
+    vector<int> nums = {4,3,1,5,2,7,90,0,6,5};
+    cout<<binarySearch(nums, 90);
+    return 0;
+}
