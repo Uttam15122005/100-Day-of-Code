@@ -1,0 +1,16 @@
+//To Find the sum of digit
+#include<iostream>
+using namespace std;
+int sumOfDigit(int digit){
+    if(digit == 0 || digit == 1){
+        return digit;
+    }
+    return sumOfDigit(digit / 10) + digit % 10;
+}
+int main(){
+    int digit;
+    cout<<"Enter the Number: ";
+    cin>>digit;
+    cout<<sumOfDigit(digit);
+    return 0;
+}
